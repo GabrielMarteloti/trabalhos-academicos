@@ -1,0 +1,65 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Container principal */
+#root {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Títulos */
+h1, h2 {
+  margin-bottom: 15px;
+}
+
+/* Botões */
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Inputs */
+input {
+  padding: 8px;
+  margin: 5px 0 15px 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Cards (caso tenha receitas, itens, etc) */
+.card {
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Navbar simples */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  margin-bottom: 20px;
+}

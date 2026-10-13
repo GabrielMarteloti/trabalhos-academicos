@@ -1,0 +1,244 @@
+/* =========================
+   RESET + VARIÁVEIS
+========================= */
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --success: #16a34a;
+  --error: #dc2626;
+  --bg: #f8fafc;
+  --white: #ffffff;
+  --gray: #64748b;
+  --border: #e2e8f0;
+
+  --radius: 10px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* =========================
+   BASE
+========================= */
+body {
+  background-color: var(--bg);
+  color: #1e293b;
+  line-height: 1.5;
+}
+
+/* =========================
+   HEADER / NAV
+========================= */
+header {
+  background: var(--white);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: var(--white);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* =========================
+   TÍTULOS
+========================= */
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  border-left: 5px solid var(--primary);
+  padding-left: 10px;
+}
+
+/* =========================
+   FORMULÁRIOS (FLEXBOX)
+========================= */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* Feedback visual */
+.input-error {
+  border-color: var(--error);
+}
+
+.input-success {
+  border-color: var(--success);
+}
+
+/* =========================
+   BOTÕES
+========================= */
+button {
+  padding: 12px;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: var(--primary-dark);
+}
+
+/* botão secundário */
+button.secondary {
+  background: var(--gray);
+}
+
+button.secondary:hover {
+  background: #475569;
+}
+
+/* =========================
+   TABELA (GRID + RESPONSIVO)
+========================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+thead {
+  background: var(--primary);
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+tbody tr:hover {
+  background: #f1f5f9;
+}
+
+/* =========================
+   MENSAGENS
+========================= */
+#mensagem,
+#erroCep {
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.sucesso {
+  color: var(--success);
+}
+
+.erro {
+  color: var(--error);
+}
+
+/* =========================
+   GRID (lista)
+========================= */
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+@media (max-width: 768px) {
+
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+}
+
+/* =========================
+   ANIMAÇÕES SUAVES
+========================= */
+.container {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
